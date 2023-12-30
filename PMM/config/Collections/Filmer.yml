@@ -1,0 +1,36 @@
+collections:
+
+  Trending:
+    trakt_trending: 10
+    tmdb_trending_daily: 10
+    tmdb_trending_weekly: 10
+    sort_title: +1_Trending
+    sync_mode: sync
+    summary: Movies Trending across the internet
+
+  # https://github.com/tom-dell/Plex-Meta-Manager-Configs
+  Universal Classic Monsters:
+    sort_title: Universal Classic Monsters 
+    summary: En samling med filmer om monstre i den klassiske "Universal Classic Monsters"
+    url_poster: https://theposterdb.com/api/assets/106840
+    collection_order: custom
+    sync_mode: sync
+    imdb_list: 
+      url: https://www.imdb.com/list/ls565593601/ 
+  
+  # https://github.com/tom-dell/Plex-Meta-Manager-Configs
+  Classic Horror:
+    sort_title: Classic Horror 
+    summary: En samling med de klassiske horror-filmene!
+    url_poster: https://theposterdb.com/api/assets/204647
+    collection_order: custom
+    sync_mode: sync
+    mdblist_list: https://mdblist.com/lists/awestom/classic-horror
+  
+  A24:
+    sort_title: A24
+    summary: Filmer utgitt av A24
+    url_poster: https://theposterdb.com/api/assets/139297
+    collection_order: custom
+    sync_mode: sync
+    trakt_list: https://trakt.tv/users/fidel-cb/lists/a24-movies-and-tv-shows

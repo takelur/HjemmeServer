@@ -1,0 +1,151 @@
+libraries:
+  Filmer:
+    metadata_path:
+    - file: config/Collections/Filmer.yml
+    - pmm: basic
+    - pmm: imdb
+    - pmm: golden
+    - pmm: oscars
+    - pmm: emmy
+    - pmm: genre
+    - pmm: seasonal
+    - pmm: country
+      template_variables:
+        use_other: false
+        style: color
+        include:
+        - no
+        - se
+        - dk
+        - fi
+    overlay_path:
+    - reapply_overlays: false
+#    - pmm: ratings
+#      template_variables:
+#        rating1: critic
+#        rating1_image: imdb
+#        rating1_font_size: 55
+#        rating1_back_color: #00000095
+#        rating1_horizontal_align: left
+#        rating1_vertical_align: bottom
+    - pmm: resolution
+    - pmm: video_format
+      template_variables:
+        vertical_align: top
+        horizontal_align: right
+#    operations:
+#      mass_critic_rating_update: imdb
+  Serier:
+    metadata_path:
+    - file: config/Collections/Serier.yml
+    - pmm: basic
+    - pmm: imdb
+    - pmm: golden
+    - pmm: emmy
+    - pmm: country
+      template_variables:
+        use_other: false
+        style: color
+        include:
+        - no
+        - se
+        - dk
+        - fi
+    overlay_path:
+    - reapply-overlays: false
+#    - pmm: ratings
+#      template_variables:
+#        rating1: critic
+#        rating1_image: imdb
+#        rating1_font_size: 55
+#        rating1_back_color: #00000095
+#        rating1_horizontal_align: left
+#        rating1_vertical_align: bottom
+#    - pmm: ratings
+#      template_variables:
+#        builder_level: episode
+#        rating1: critic
+#        rating1_image: imdb
+#        rating1_font_size: 55
+#        rating1_back_color: #00000095
+#        rating1_horizontal_align: left
+#        rating1_vertical_align: bottom
+    - pmm: video-format
+      template_variables:
+        vertical_align: top
+        horizontal_align: right
+    - pmm: resolution
+#    operations:
+#      mass_critic_rating_update: imdb
+#      mass_episode_critic_rating_update: imdb
+playlist_files:
+  - pmm: playlist
+    template_variables:
+      libraries: Filmer, Serier
+settings:
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: true
+  prioritize_assets: false
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order:
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_options: false
+  show_missing: true
+  show_missing_assets: true
+  save_report: false
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_user: all
+  playlist_exclude_users:
+  playlist_report: false
+  verify_ssl: false
+  custom_repo:
+  check_nightly: false
+  run_order:
+  - operations
+  - metadata
+  - overlays
+plex:
+  url: http://xxx.xxx.xxx.xxx:32400
+  token: xxxxxxxxxxxxxxxxxxxx
+  timeout: 60
+  db_cache:
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+tmdb:
+  apikey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  language: en
+  cache_expiration: 60
+  region:
+trakt:
+  client_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  pin:
+  authorization:
+    # everything below is autofilled by the script
+    access_token:
+    token_type:
+    expires_in: 
+    refresh_token:
+    scope: 
+    created_at: 
