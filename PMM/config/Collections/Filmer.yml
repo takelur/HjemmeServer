@@ -10,7 +10,7 @@ collections:
 
   # https://github.com/tom-dell/Plex-Meta-Manager-Configs
   Universal Classic Monsters:
-    sort_title: Universal Classic Monsters 
+    sort_title: +01_Universal Classic Monsters
     summary: En samling med filmer om monstre i den klassiske "Universal Classic Monsters"
     url_poster: https://theposterdb.com/api/assets/106840
     collection_order: custom
@@ -20,7 +20,7 @@ collections:
   
   # https://github.com/tom-dell/Plex-Meta-Manager-Configs
   Classic Horror:
-    sort_title: Classic Horror 
+    sort_title: +01_Classic Horror
     summary: En samling med de klassiske horror-filmene!
     url_poster: https://theposterdb.com/api/assets/204647
     collection_order: custom

@@ -2,7 +2,7 @@ collections:
 
   # https://github.com/tom-dell/Plex-Meta-Manager-Configs
   TV shows trending this week:
-    sort_title: TV shows trending this week
+    sort_title: +01_TV shows trending this week
     summary: A collection of TV shows that are trending this week
     url_poster: https://theposterdb.com/api/assets/231652
     collection_order: custom
