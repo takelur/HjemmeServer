@@ -4,9 +4,19 @@ collections:
     trakt_trending: 10
     tmdb_trending_daily: 10
     tmdb_trending_weekly: 10
-    sort_title: +1_Trending
+    url_poster: https://i.imgur.com/kEi4zWu.png
+    sort_title: +01_Trending
     sync_mode: sync
     summary: Movies Trending across the internet
+
+  1001 Movies You Must See Before You Die:
+    trakt_list: https://trakt.tv/users/sp1ti/lists/1001-movies-you-must-see-before-you-die
+    summary: "1001 Movies You Must See Before You Die is a film reference book edited by Steven Jay Schneider with original essays on each film contributed by over 70 film critics."
+    url_poster: https://i.imgur.com/wdDPk80.jpeg
+    sync_mode: sync
+    collection_mode: default
+    collection_order: custom
+    sort_title: +01_1001 Movies You Must See Before You Die
 
   # https://github.com/tom-dell/Plex-Meta-Manager-Configs
   Universal Classic Monsters:
@@ -27,8 +37,17 @@ collections:
     sync_mode: sync
     mdblist_list: https://mdblist.com/lists/awestom/classic-horror
   
+  Top Rated Documentary Collection:
+    sort_title: +01__Top Rated Documentary Collection
+    trakt_list: https://trakt.tv/users/hdlists/lists/documentary-movies-top-rated-from-1980-to-today
+    sync_mode: sync
+    smart_label: critic_rating.desc
+    summary: Top Rated Documentaries from 1980 onward
+    url_poster: https://i.imgur.com/2AtAgce.jpg
+    url_background: https://i.imgur.com/lJQwoDH.jpg
+
   A24:
-    sort_title: A24
+    sort_title: +02_A24
     summary: Filmer utgitt av A24
     url_poster: https://theposterdb.com/api/assets/139297
     collection_order: custom
