@@ -1,4 +1,4 @@
 # Kjør Kometa hver natt klokken 3
 0 3 * * * docker run --user $(id -u):$(id -g) --rm -v "/home/havard/PLEX-METADATA-MANAGER/config:/config:rw" kometateam/kometa --run
 # Oppdater container image hver natt til mandag klokken 4
-0 4 * * 1 /bin/bash -c '/usr/bin/docker pull kometateam/kometa >> /home/havard/PLEX-METADATA-MANAGER/update-dev-cont.log 2>&1; echo "$(date "+\%Y-\%m-\%d") - Docker pull completed" >> /home/havard/PLEX-METADATA-MANAGER/update>
+0 4 * * 1 /bin/bash -c '/usr/bin/docker pull kometateam/kometa >> /home/havard/PLEX-METADATA-MANAGER/update-dev-cont.log 2>&1; echo "$(date "+\%Y-\%m-\%d") - Docker pull completed" >> /home/havard/PLEX-METADATA-MANAGER/update-dev-cont.log'
