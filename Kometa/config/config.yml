@@ -2,14 +2,14 @@ libraries:
   Filmer:
     metadata_path:
     - file: config/Collections/Filmer.yml
-    - pmm: basic
-    - pmm: imdb
-    - pmm: golden
-    - pmm: oscars
-    - pmm: emmy
-    - pmm: genre
-    - pmm: seasonal
-    - pmm: country
+    - default: basic
+    - default: imdb
+    - default: golden
+    - default: oscars
+    - default: emmy
+    - default: genre
+    - default: seasonal
+    - default: country
       template_variables:
         use_other: false
         style: color
@@ -19,8 +19,8 @@ libraries:
         - dk
         - fi
     overlay_path:
-    - reapply_overlays: false
-#    - pmm: ratings
+    - reapply_overlays: true
+#    - default: ratings
 #      template_variables:
 #        rating1: critic
 #        rating1_image: imdb
@@ -28,8 +28,8 @@ libraries:
 #        rating1_back_color: #00000095
 #        rating1_horizontal_align: left
 #        rating1_vertical_align: bottom
-    - pmm: resolution
-    - pmm: video_format
+    - default: resolution
+    - default: video_format
       template_variables:
         vertical_align: top
         horizontal_align: right
@@ -38,11 +38,12 @@ libraries:
   Serier:
     metadata_path:
     - file: config/Collections/Serier.yml
-    - pmm: basic
-    - pmm: imdb
-    - pmm: golden
-    - pmm: emmy
-    - pmm: country
+    - default: basic
+    - default: imdb
+    - default: golden
+    - default: emmy
+    - default: genre
+    - default: country
       template_variables:
         use_other: false
         style: color
@@ -52,8 +53,8 @@ libraries:
         - dk
         - fi
     overlay_path:
-    - reapply-overlays: false
-#    - pmm: ratings
+    - reapply-overlays: true
+#    - default: ratings
 #      template_variables:
 #        rating1: critic
 #        rating1_image: imdb
@@ -61,7 +62,7 @@ libraries:
 #        rating1_back_color: #00000095
 #        rating1_horizontal_align: left
 #        rating1_vertical_align: bottom
-#    - pmm: ratings
+#    - default: ratings
 #      template_variables:
 #        builder_level: episode
 #        rating1: critic
@@ -70,18 +71,18 @@ libraries:
 #        rating1_back_color: #00000095
 #        rating1_horizontal_align: left
 #        rating1_vertical_align: bottom
-    - pmm: video-format
+    - default: video-format
       template_variables:
         vertical_align: top
         horizontal_align: right
-    - pmm: resolution
+    - default: resolution
 #    operations:
 #      mass_critic_rating_update: imdb
 #      mass_episode_critic_rating_update: imdb
 playlist_files:
-  - pmm: playlist
-    template_variables:
-      libraries: Filmer, Serier
+- default: playlist
+  template_variables:
+    libraries: Filmer, Serier
 settings:
   cache: true
   cache_expiration: 60
@@ -123,29 +124,31 @@ settings:
   run_order:
   - operations
   - metadata
+  - collections
   - overlays
 plex:
-  url: http://xxx.xxx.xxx.xxx:32400
-  token: xxxxxxxxxxxxxxxxxxxx
+  url: http://192.168.10.210:32400
+  token: aWUbz4R-LtLo-RshjqGQ
   timeout: 60
   db_cache:
   clean_bundles: false
   empty_trash: false
   optimize: false
+  verify_ssl:
 tmdb:
-  apikey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  apikey: 3bfa5c3e069d37ea243f20fed779ce61
   language: en
   cache_expiration: 60
   region:
 trakt:
-  client_id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  client_secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  client_id: 76d95c2d879311cd1b96fb0610afd8a9f7d0019b100dcf15159311a0d458ff3f
+  client_secret: 00c196ead61014faf9eadcbd42e2fe37386cf2f6edd096e2ddb73495eaa124e5
   pin:
   authorization:
     # everything below is autofilled by the script
-    access_token:
-    token_type:
-    expires_in: 
-    refresh_token:
-    scope: 
-    created_at: 
+    access_token: 883f3d0a4dee0bddfd0a20b876187f89968d963dc51dedcf5ac499592255662b
+    token_type: Bearer
+    expires_in: 7889238
+    refresh_token: 06d1be5a710fcaee1625bffca19538b95565ffecbff039bd0f737c5e0f18b672
+    scope: public
+    created_at: 1711594803

@@ -12,15 +12,15 @@ read -p "Skriv inn valg (s/n/d/u): " user_choice
 case $user_choice in
     s)
         # Stable versjon
-        docker run --rm -it -v "./config:/config:rw" meisnate12/plex-meta-manager --run
+        docker run --rm -it -v "./config:/config:rw" kometateam/kometa --run
         ;;
     n)
         # Nightly versjon
-        docker run --rm -it -v "./config:/config:rw" meisnate12/plex-meta-manager:nightly --run
+        docker run --rm -it -v "./config:/config:rw" kometateam/kometa:nightly --run
         ;;
     d)
         # Develop versjon
-        docker run --rm -it -v "./config:/config:rw" meisnate12/plex-meta-manager:develop --run
+        docker run --rm -it -v "./config:/config:rw" kometateam/kometa:develop --run
         ;;
     u)
         # Spørring for oppdatering av container
@@ -33,18 +33,18 @@ case $user_choice in
 
         case $user_choice in
             s)
-                docker pull meisnate12/plex-meta-manager
+                docker pull kometateam/kometa
                 ;;
             n)
-                docker pull meisnate12/plex-meta-manager:nightly
+                docker pull kometateam/kometa:nightly
                 ;;
             d)
-                docker pull meisnate12/plex-meta-manager:develop
+                docker pull kometateam/kometa:develop
                 ;;
             a)
-                docker pull meisnate12/plex-meta-manager
-                docker pull meisnate12/plex-meta-manager:nightly
-                docker pull meisnate12/plex-meta-manager:develop
+                docker pull kometateam/kometa
+                docker pull kometateam/kometa:nightly
+                docker pull kometateam/kometa:develop
                 ;;
             *)
                 echo "Valget er ikke akseptert. Vennligst kjør skriptet igjen og følg instruksene"
