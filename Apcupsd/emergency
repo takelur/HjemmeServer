@@ -1,0 +1,15 @@
+#!/bin/bash
+# This script if placed in /etc/apcupsd will be called by /etc/apcupsd/apccontrol
+# when the UPS is on battery power, the battery is low and the utility power is on: a sure sign of battery failure.
+
+# Configuration
+WEBHOOK_URL="WEBHOOK"
+
+# Function to send message to Discord
+send_discord_alert() {
+    local message=$1
+    curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"$message\"}" $WEBHOOK_URL
+}
+
+# Send the alert
+send_discord_alert "❗ Nødsituasjon: UPS går på batteristrøm selv om den er koblet til strømmen, og spenningen begynner å bli lav. Krever umiddelbar oppmerksomhet!"
