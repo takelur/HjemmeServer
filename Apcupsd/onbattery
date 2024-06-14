@@ -1,0 +1,16 @@
+#!/bin/bash
+# This script if placed in /etc/apcupsd will be called by /etc/apcupsd/apccontrol
+# when the UPS goes on batteries
+
+
+# Configuration
+WEBHOOK_URL="WEBHOOK"
+
+# Function to send message to Discord
+send_discord_alert() {
+    local message=$1
+    curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"$message\"}" $WEBHOOK_URL
+}
+
+# Send the alert
+send_discord_alert "⚠️ Strømbrudd! Serveren kjører nå på batteristrøm!"
